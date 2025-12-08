@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vysakh Raju</title>
+    <link rel="icon" href="assets/profile.png" type="image/png">
+</head>
+
+<body>
+    <!-- PRELOADER: Feature A - HACKING THEME -->
+    <div id="loader">
+        <canvas id="matrix-canvas"></canvas>
+        <div class="loader-content">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                    <span class="terminal-title">root@vysakh:~$</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line">
+                        <span class="prompt">root@vysakh:~$</span>
+                        <span class="command">sudo ./initialize_portfolio.sh</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="system-text">[sudo] password for vysakh: ●●●●●●●●</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="success-text">✓ Authentication successful</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="system-text">Establishing secure connection...</span>
+                    </div>
+                    <div class="terminal-line" id="loading-assets">
+                        <span class="system-text">Loading system assets: <span
+                                class="loader-percentage">0%</span></span>
+                    </div>
+                    <div class="terminal-line">
+                        <div class="loader-bar-terminal">
+                            <div class="loader-progress-terminal"></div>
+                        </div>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="glitch-text">DECRYPTING NEURAL INTERFACE...</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="scanning-text">► Scanning: User Credentials</span>
+                    </div>
+                    <div class="terminal-line cursor-blink">
+                        <span class="prompt">root@vysakh:~$</span>
+                        <span class="cursor">█</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3D CANVAS BACKGROUND: Feature C -->
+    <canvas id="bg"></canvas>
+
+    <!-- NAVIGATION BAR -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-symbol">&lt;</span>
+                <span class="brand-name">vysakh</span>
+                <span class="brand-symbol">/&gt;</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#techstack" class="nav-link">TechStack</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="assets/vysakhraju_resume.pdf" download class="nav-link">Resume</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SCROLLABLE CONTENT: Feature B Layer 2 -->
+    <main>
+        <!-- HERO SECTION -->
+        <section id="hero" class="section">
+            <div class="container">
+                <div class="hero-image-container">
+                    <img src="assets/my_pic.png" alt="Vysakh Raju" class="hero-profile-img">
+                </div>
+                <h1 class="glitch" data-text="Vysakh Raju">Vysakh Raju</h1>
+                <p class="subtitle"><span id="typing-subtitle"></span><span class="cursor-blink">|</span></p>
+                <div class="cta-group">
+                    <a href="#about" class="btn-primary">About Me</a>
+                    <a href="assets/vysakhraju_resume.pdf" download class="btn-secondary">
+                        <span class="download-icon">⬇</span> Download Resume
+                    </a>
+                    <a href="#contact" class="btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">// About_Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            I’m an experienced Python Developer with 4+ years of building full-stack web applications
+                            and real-time systems. I work with LLMs, RAG solutions (Langchain, ChromaDB), and backend
+                            services using Redis, WebSockets, and REST APIs.
+                        </p>
+                        <p>
+                            I enjoy designing scalable systems with clean architecture, CI/CD pipelines, and
+                            containerized deployments using Docker. I focus on performance, automation, and solving
+                            real-world problems through reliable,
+                            maintainable code.
+                        </p>
+
+
+                    </div>
+                    <br>
+                    <div class="content-block">
+                        <h3>What I Do</h3>
+                        <ul class="skill-list">
+                            <li><span class="skill-icon">▹</span> Python & Backend Development</li>
+                            <li><span class="skill-icon">▹</span> Full-Stack Web Applications</li>
+                            <li><span class="skill-icon">▹</span> LLM & RAG Solutions (LangChain, ChromaDB)</li>
+                            <li><span class="skill-icon">▹</span> High-Performance System Design</li>
+                            <li><span class="skill-icon">▹</span> CI/CD & Deployment Pipelines</li>
+                            <li><span class="skill-icon">▹</span> Database Design (MongoDB, Redis)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION SECTION -->
+        <section id="education" class="section">
+            <div class="container">
+                <h2 class="section-title">// Education</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>B.Tech in Computer Science and Engineering</h3>
+                            <p class="timeline-company">Ilahia College of Engineering and Technology</p>
+                            <p class="timeline-date">2016 - 2020</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Higher Secondary Education (Computer Science)</h3>
+                            <p class="timeline-company">St. Mary's HSS</p>
+                            <p class="timeline-date">2014 - 2016</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE SECTION -->
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title">// Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Project Engineer</h3>
+                            <p class="timeline-company">Bharath Electronics Ltd.</p>
+                            <p class="timeline-date">2021 - Present</p>
+                            <p>As a core developer, responsible for building web applications, working with large
+                                language models, and writing Python scripts for data analysis and visualization.</p>
+                            <ul style="margin-top: 10px; padding-left: 20px; color: var(--text-secondary);">
+                                <li>Built a full-stack AI system using Ollama, Langchain, and ChromaDB for RAG-based
+                                    document search and chat memory.</li>
+                                <li>Designed PDF/text ingestion pipelines with embedding and session storage using
+                                    Redis.</li>
+                                <li>Developed a user-friendly Streamlit UI with streaming output, session export, and
+                                    admin analytics.</li>
+                                <li>Integrated tools like Git repo analysis, code summarization, and post-response
+                                    feedback into the chat workflow.</li>
+                                <li>Created background jobs to clone and analyze GitLab repositories via Git Ingest.
+                                </li>
+                                <li>Built a real-time DevOps bot using GitLab Webhooks and Mattermost for CI/CD event
+                                    notifications.</li>
+                                <li>Managed performance with local model orchestration, ChromaDB indexing, and Redis
+                                    caching.</li>
+                                <li>Worked on socket programming to handle high-throughput TCP/UDP (unicast & multicast)
+                                    communication.</li>
+                                <li>Developed tools to analyze and visualize packet data, and created RESTful APIs for
+                                    front-end/back-end integration.</li>
+                                <li>Deployed and maintained applications using Docker, ensuring environment consistency
+                                    and smooth CI/CD with GitLab pipelines.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECHSTACK SECTION -->
+        <section id="techstack" class="section">
+            <div class="container">
+                <h2 class="section-title">// TechStack</h2>
+                <div class="techstack-intro">
+                    <p>My arsenal of tools and technologies</p>
+                </div>
+
+                <div class="tech-grid-container">
+                    <!-- Languages -->
+                    <div class="tech-category">
+                        <h3 class="tech-category-title">Languages</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">Python</span>
+                            <span class="tech-item">JavaScript</span>
+                            <span class="tech-item">HTML5</span>
+                            <span class="tech-item">CSS3</span>
+                            <span class="tech-item">Shell Scripting</span>
+                        </div>
+                    </div>
+
+                    <!-- Frameworks -->
+                    <div class="tech-category">
+                        <h3 class="tech-category-title">Frameworks</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">Tornado</span>
+                            <span class="tech-item">FastAPI</span>
+                            <span class="tech-item">Streamlit</span>
+                            <span class="tech-item">Chainlit</span>
+                            <span class="tech-item">Bootstrap</span>
+                            <span class="tech-item">jQuery</span>
+                            <span class="tech-item">Next.js</span>
+                        </div>
+                    </div>
+
+                    <!-- Libraries -->
+                    <div class="tech-category">
+                        <h3 class="tech-category-title">Libraries</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">Langchain</span>
+                            <span class="tech-item">Requests</span>
+                            <span class="tech-item">NumPy</span>
+                            <span class="tech-item">Matplotlib</span>
+                            <span class="tech-item">PyMongo</span>
+                            <span class="tech-item">Socket</span>
+                            <span class="tech-item">flot.js</span>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Platforms -->
+                    <div class="tech-category">
+                        <h3 class="tech-category-title">Tools & Platforms</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">Ollama</span>
+                            <span class="tech-item">ChromaDB</span>
+                            <span class="tech-item">GitLab</span>
+                            <span class="tech-item">Docker</span>
+                            <span class="tech-item">Mattermost</span>
+                            <span class="tech-item">Git</span>
+                            <span class="tech-item">VS Code</span>
+                            <span class="tech-item">Jira</span>
+                            <span class="tech-item">Confluence</span>
+                            <span class="tech-item">Docmost</span>
+                        </div>
+                    </div>
+
+                    <!-- Databases -->
+                    <div class="tech-category">
+                        <h3 class="tech-category-title">Databases</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">MongoDB</span>
+                            <span class="tech-item">SQLite</span>
+                            <span class="tech-item">Redis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">// Selected Projects</h2>
+                <div class="project-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="project-number">01</div>
+                        <h3>AI Chat Assistant with Local LLMs</h3>
+                        <p>Developed an AI assistant using Ollama, Langchain, and ChromaDB for private RAG-based
+                            question answering. Enabled ingestion of PDF and text files with chunking for accurate
+                            search. Designed Streamlit frontend with streaming UI and integrated real-time tools.</p>
+                        <div class="project-tags">
+                            <span class="tag">Ollama</span>
+                            <span class="tag">Langchain</span>
+                            <span class="tag">ChromaDB</span>
+                            <span class="tag">Streamlit</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="project-number">02</div>
+                        <h3>Application Deployment and Control</h3>
+                        <p>Web-based platform using Tornado to manage distributed client applications and hardware.
+                            Utilized WebSockets for real-time updates and Redis with Sentinel for reliable communication
+                            between server and daemon.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Tornado</span>
+                            <span class="tag">WebSockets</span>
+                            <span class="tag">Redis</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <div class="project-number">03</div>
+                        <h3>Real-Time Data & Audio Visualization</h3>
+                        <p>Visualized real-time telemetry data using Python (Tornado) and JavaScript. Used
+                            multi-threaded UDP sockets for high-throughput data, indexed in MongoDB. Integrated
+                            AudioContext for live audio streaming.</p>
+                        <div class="project-tags">
+                            <span class="tag">Tornado</span>
+                            <span class="tag">UDP Sockets</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">AudioContext</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card">
+                        <div class="project-number">04</div>
+                        <h3>Software Build Application</h3>
+                        <p>FastAPI application to automate software builds from GitLab. Users upload config, and the app
+                            clones/pulls repo, builds software, and compresses it. Implemented concurrent builds with
+                            ThreadPoolExecutor.</p>
+                        <div class="project-tags">
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">GitLab API</span>
+                            <span class="tag">Redis</span>
+                            <span class="tag">ThreadPool</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card">
+                        <div class="project-number">05</div>
+                        <h3>Intelligent Code-Analysis Tool</h3>
+                        <p>Vectorized source code using ChromaDB for analysis. Created GitLab webhook listener with
+                            FastAPI to capture merge events, analyze changes using LLM, and post insights to Mattermost.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">ChromaDB</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">LLM</span>
+                            <span class="tag">GitLab Webhooks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">// Get In Touch</h2>
+
+                <div class="contact-container">
+                    <!-- Contact Info Card -->
+                    <div class="contact-card info-card">
+                        <h3>Contact Details</h3>
+                        <div class="contact-list">
+                            <div class="contact-item">
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                        </path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </span>
+                                <a href="mailto:vysakhraju1998@gmail.com">vysakhraju1998@gmail.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                        </path>
+                                    </svg>
+                                </span>
+                                <a href="tel:+918907338043">+91 8907338043</a>
+                            </div>
+                            <div class="contact-item">
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                </span>
+                                <span>Ernakulam, Kerala</span>
+                            </div>
+                        </div>
+
+                        <div class="connect-section">
+                            <h3>Social Profiles</h3>
+                            <div class="social-icons">
+                                <a href="https://linkedin.com/in/vysakhraju" target="_blank" class="social-icon"
+                                    aria-label="LinkedIn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                        </path>
+                                        <rect x="2" y="9" width="4" height="12"></rect>
+                                        <circle cx="4" cy="4" r="2"></circle>
+                                    </svg>
+                                </a>
+                                <a href="https://github.com/vysakhrt" target="_blank" class="social-icon"
+                                    aria-label="GitHub">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a href="https://instagram.com/vysakhraju_" target="_blank" class="social-icon"
+                                    aria-label="Instagram">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form Card -->
+                    <div class="contact-card form-card">
+                        <h3>Send a Message</h3>
+                        <form class="contact-form" action="https://formspree.io/f/xjkneenv" method="POST">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" required placeholder=" ">
+                                <label for="name">Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" required placeholder=" ">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="subject" name="subject" required placeholder=" ">
+                                <label for="subject">Subject</label>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" required placeholder=" " rows="5"></textarea>
+                                <label for="message">Message</label>
+                            </div>
+                            <button type="submit" class="btn-primary full-width">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        style="width: 18px; height: 18px;">
+                                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                    </svg>
+                                </span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Vysakh Raju. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <!-- Back to Top Button -->
+        <div class="back-to-top" id="backToTop">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 15l-6-6-6 6" />
+            </svg>
+        </div>
+        </div>
+        </footer>
+    </main>
+
+    <!-- THREE.JS IMPORT MAP -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.js"
+            }
+        }
+    </script>
+
+    <!-- MAIN JAVASCRIPT -->
+
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="module" src="js/main.js"></script>
+    <script src="js/ui.js" defer></script>
+</body>
+
+</html>

@@ -91,7 +91,7 @@ loadingManager.onLoad = () => {
 
         const accessLine = document.createElement('div');
         accessLine.className = 'terminal-line';
-        accessLine.innerHTML = '<span class="success-text">✓ Access granted - Welcome to the matrix</span>';
+        accessLine.innerHTML = '<span class="success-text">✓ Access granted - Welcome to the Vysakh Portfolio</span>';
         terminalBody.insertBefore(accessLine, document.querySelector('.cursor-blink'));
 
         setTimeout(() => {

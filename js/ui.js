@@ -33,71 +33,11 @@
 
     const matrixInterval = setInterval(drawMatrix, 33);
 
-    // 2. Hacking Sound Effect
-    let audioCtx;
-    let soundInterval;
-    let hasInteracted = false;
-
-    const initAudio = () => {
-        hasInteracted = true;
-        if (!audioCtx) {
-            try {
-                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-            } catch (e) { return; }
-        }
-        if (audioCtx && audioCtx.state === 'suspended') {
-            audioCtx.resume();
-        }
-        window.removeEventListener('click', initAudio);
-        window.removeEventListener('keydown', initAudio);
-        window.removeEventListener('touchstart', initAudio);
-    };
-
-    window.addEventListener('click', initAudio);
-    window.addEventListener('keydown', initAudio);
-    window.addEventListener('touchstart', initAudio);
-
-    function playHackingSound() {
-        if (!hasInteracted || !audioCtx) return;
-
-        // Resume context if suspended (browser policy)
-        if (audioCtx.state === 'suspended') {
-            audioCtx.resume();
-        }
-
-        const oscillator = audioCtx.createOscillator();
-        const gainNode = audioCtx.createGain();
-
-        oscillator.connect(gainNode);
-        gainNode.connect(audioCtx.destination);
-
-        // Random frequency for "data" sound (high pitched blips)
-        oscillator.type = 'square';
-        oscillator.frequency.setValueAtTime(Math.random() * 1500 + 500, audioCtx.currentTime);
-
-        // Short, sharp blip
-        gainNode.gain.setValueAtTime(0.1, audioCtx.currentTime);
-        gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.1);
-
-        oscillator.start();
-        oscillator.stop(audioCtx.currentTime + 0.1);
-    }
-
-    // Attempt to play sound
-    soundInterval = setInterval(() => {
-        // Play random blips
-        if (Math.random() > 0.8) playHackingSound();
-    }, 80);
-
     // 3. Cleanup
     const observer = new MutationObserver((mutations) => {
         mutations.forEach((mutation) => {
             if (mutation.target.classList.contains('fade-out')) {
                 clearInterval(matrixInterval);
-                clearInterval(soundInterval);
-                if (audioCtx) {
-                    audioCtx.close();
-                }
                 observer.disconnect();
             }
         });

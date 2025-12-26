@@ -504,10 +504,10 @@
         }
 
         .section {
-            min-height: 100vh;
+            min-height: auto;
             display: flex;
             align-items: center;
-            padding: calc(var(--spacing-unit) * 10) 0;
+            padding: calc(var(--spacing-unit) * 6) 0;
         }
 
         /* ==========================================
@@ -565,6 +565,7 @@
    ========================================== */
         #hero {
             text-align: center;
+            min-height: 100vh;
         }
 
         .glitch {
@@ -588,8 +589,8 @@
         }
 
         .hero-profile-img {
-            width: 150px;
-            height: 150px;
+            width: 250px;
+            height: 250px;
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid var(--accent-primary);
@@ -1111,6 +1112,14 @@
         /* ==========================================
    RESPONSIVE DESIGN
    ========================================== */
+        @media (orientation: portrait) {
+            .section {
+                min-height: auto;
+                padding-top: 60px;
+                padding-bottom: 60px;
+            }
+        }
+
         @media (max-width: 768px) {
             .nav-toggle {
                 display: flex;
@@ -1149,6 +1158,19 @@
             .btn-secondary {
                 width: 100%;
                 max-width: 300px;
+            }
+
+            /* Contact Section Mobile Fixes */
+            #contact .container {
+                padding: 0 20px;
+            }
+
+            .contact-card {
+                padding: calc(var(--spacing-unit) * 3);
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
             }
 
             .contact-links {

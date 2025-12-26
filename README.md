@@ -3,7 +3,7 @@
 A futuristic, interactive 3D portfolio website designed for AI/Python developers. It features a "Living Neural Network" background that reacts to user interaction, a hacking-themed preloader, and a clean, modern UI.
 
 ![Portfolio Preview](assets/preview.png)
-*(Note: Add a screenshot of your site here)*
+
 
 ## ✨ Key Features
 
@@ -25,8 +25,8 @@ A futuristic, interactive 3D portfolio website designed for AI/Python developers
 
 1.  **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/my_portfolio.git
-    cd my_portfolio
+    git clone https://github.com/vysakhrt/portfolio-website.git
+    cd portfolio-website
     ```
 
 2.  **Run Locally**:

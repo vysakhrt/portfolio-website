@@ -222,4 +222,88 @@ if (contactForm) {
     });
 }
 
+// ==========================================
+// LINK PREVIEW FEATURE
+// ==========================================
+(function () {
+    const previewContainer = document.getElementById('link-preview');
+    const previewImage = document.getElementById('preview-image');
+    const previewTitle = document.getElementById('preview-title');
+    const previewDesc = document.getElementById('preview-desc');
+    const previewUrl = document.getElementById('preview-url');
+
+    // Static Data for Link Previews
+    const linkData = {
+        'https://linkedin.com/in/vysakhraju': {
+            title: 'Vysakh Raju | LinkedIn',
+            desc: 'Connect with me on LinkedIn. View my professional profile, experience, and network.',
+            image: 'assets/avatar.png' // Using profile pic as fallback/placeholder
+        },
+        'https://github.com/vysakhrt': {
+            title: 'vysakhrt (Vysakh Raju) · GitHub',
+            desc: 'Check out my open source projects and code repositories on GitHub.',
+            image: 'assets/avatar.png'
+        },
+        'https://instagram.com/vysakhraju_': {
+            title: 'Vysakh Raju (@vysakhraju_) • Instagram',
+            desc: 'Follow me on Instagram for personal updates and photography.',
+            image: 'assets/avatar.png'
+        },
+        // 'assets/vysakhraju_resume.pdf': {
+        //     title: 'Resume - Vysakh Raju',
+        //     desc: 'Download my detailed resume covering my experience, skills, and education.',
+        //     image: 'assets/img.png'
+        // }
+    };
+
+    // Select all links that match our data keys
+    const links = document.querySelectorAll('a');
+
+    links.forEach(link => {
+        const href = link.getAttribute('href');
+        if (linkData[href]) {
+            link.addEventListener('mouseenter', (e) => showPreview(e, href));
+            link.addEventListener('mouseleave', hidePreview);
+            link.addEventListener('mousemove', movePreview);
+        }
+    });
+
+    function showPreview(e, href) {
+        const data = linkData[href];
+        if (!data) return;
+
+        previewTitle.textContent = data.title;
+        previewDesc.textContent = data.desc;
+        previewUrl.textContent = href;
+        previewImage.src = data.image;
+
+        previewContainer.classList.add('active');
+        movePreview(e);
+    }
+
+    function hidePreview() {
+        previewContainer.classList.remove('active');
+    }
+
+    function movePreview(e) {
+        const xOffset = 20;
+        const yOffset = 20;
+
+        // Boundary checks to keep it on screen
+        let left = e.clientX + xOffset;
+        let top = e.clientY + yOffset;
+
+        if (left + previewContainer.offsetWidth > window.innerWidth) {
+            left = e.clientX - previewContainer.offsetWidth - xOffset;
+        }
+
+        if (top + previewContainer.offsetHeight > window.innerHeight) {
+            top = e.clientY - previewContainer.offsetHeight - yOffset;
+        }
+
+        previewContainer.style.left = `${left}px`;
+        previewContainer.style.top = `${top}px`;
+    }
+})();
+
 

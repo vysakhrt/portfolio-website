@@ -2,17 +2,61 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vysakh Raju</title>
-    <link rel="icon" href="assets/profile.png" type="image/png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- PRELOAD MAIN CSS -->
+    <!-- Primary SEO -->
+    <title>Vysakh Raju | Python & AI Developer</title>
+    <meta name="description"
+        content="Python Developer with 4+ years of experience in Full-Stack development, AI, LLMs, RAG systems, and scalable backend services." />
+    <meta name="author" content="Vysakh Raju" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://vysakhraju.netlify.app" />
+
+    <!-- Open Graph (WhatsApp, LinkedIn, Facebook) -->
+    <meta property="og:title" content="Vysakh Raju | Python & AI Developer" />
+    <meta property="og:description" content="Full-Stack Python Developer | AI • LLM • RAG • Backend Systems" />
+    <meta property="og:image" content="https://vysakhraju.netlify.app/assets/link-preview.png" />
+    <meta property="og:url" content="https://vysakhraju.netlify.app" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Vysakh Raju | Python & AI Developer" />
+    <meta name="twitter:description" content="Python • AI • LLM • Full-Stack Developer" />
+    <meta name="twitter:image" content="https://vysakhraju.netlify.app/assets/link-preview.png" />
+
+    <!-- Theme / Mobile -->
+    <meta name="theme-color" content="#0b0f1a" />
+    <link rel="apple-touch-icon" href="assets/favicon.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.png" type="image/png" />
+
+    <!-- Preload CSS -->
     <link rel="preload" href="css/style.css" as="style">
 
-    <!-- MAIN CSS -->
+    <!-- Main CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/link-preview.css">
+
+    <!-- Structured Data (Google SEO) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Vysakh Raju",
+        "url": "https://vysakhraju.netlify.app",
+        "jobTitle": "Python & AI Developer",
+        "sameAs": [
+            "https://www.linkedin.com/in/vysakhraju",
+            "https://github.com/vysakhrt"
+        ]
+    }
+    </script>
 </head>
+
+
 
 
 <body>
@@ -535,6 +579,18 @@
 
 
 
+
+    <!-- LINK PREVIEW CONTAINER -->
+    <div id="link-preview" class="link-preview">
+        <div class="preview-content">
+            <img id="preview-image" src="" alt="Link Preview">
+            <div class="preview-info">
+                <h4 id="preview-title"></h4>
+                <p id="preview-desc"></p>
+                <span id="preview-url"></span>
+            </div>
+        </div>
+    </div>
 
     <script type="module" src="js/main.js"></script>
     <script src="js/ui.js" defer></script>

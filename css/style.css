@@ -1252,9 +1252,9 @@ a.contact-link-item:hover .clink-arrow { opacity: 1; transform: translateX(4px);
     .section { padding: 80px 0; }
 
     #navbar {
-        top: auto;
-        bottom: 24px;
-        transform: translateX(-50%) translateY(100px);
+        top: 16px;
+        bottom: auto;
+        transform: translateX(-50%) translateY(-100px);
     }
     #navbar.visible {
         transform: translateX(-50%) translateY(0);

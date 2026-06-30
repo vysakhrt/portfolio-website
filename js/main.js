@@ -327,11 +327,13 @@
     const sections = document.querySelectorAll('section[id]');
 
     window.addEventListener('scroll', () => {
-        // Scrolled class
+        // Scrolled class & visibility
         if (window.scrollY > 60) {
             navbar.classList.add('scrolled');
+            navbar.classList.add('visible');
         } else {
             navbar.classList.remove('scrolled');
+            navbar.classList.remove('visible');
         }
 
         // Active link
@@ -441,6 +443,22 @@
 
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
+        
+        // Email validation
+        const emailInput = document.getElementById('f-email');
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailInput || !emailRegex.test(emailInput.value.trim())) {
+            const originalText = btn.querySelector('.btn-submit-text').textContent;
+            btn.querySelector('.btn-submit-text').textContent = '⚠️ Invalid Email';
+            const originalBg = btn.style.background;
+            btn.style.background = '#ff4a4a';
+            setTimeout(() => {
+                btn.querySelector('.btn-submit-text').textContent = originalText;
+                btn.style.background = originalBg;
+            }, 3000);
+            return;
+        }
+
         const originalText = btn.querySelector('.btn-submit-text').textContent;
         btn.querySelector('.btn-submit-text').textContent = 'Sending...';
         btn.disabled = true;

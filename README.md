@@ -4,7 +4,7 @@ Hey there! Welcome to my personal portfolio space. I’m Vysakh Raju, a Python D
 
 I built this website to showcase my projects, professional journey, and tech stack in a way that feels immersive, sleek, and highly interactive.
 
-![Portfolio Preview](assets/preview.png)
+![Portfolio Preview](assets/link-preview.png)
 
 ---
 

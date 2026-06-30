@@ -173,7 +173,7 @@ body.cursor-hover .cursor-ring {
 #navbar {
     position: fixed;
     top: 0; left: 0; right: 0;
-    z-index: 1000;
+    z-index: 10000;
     padding: 0 32px;
     height: 70px;
     display: flex;
@@ -189,7 +189,7 @@ body.cursor-hover .cursor-ring {
     pointer-events: auto;
 }
 #navbar.scrolled {
-    background: rgba(5, 5, 8, 0.85);
+    background: rgba(5, 5, 8, 0.96);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
     border-bottom: 1px solid var(--c-border);
@@ -292,7 +292,7 @@ body.cursor-hover .cursor-ring {
     background: rgba(13, 13, 20, 0.97);
     backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(40px);
-    z-index: 1005;
+    z-index: 9999;
     border-left: 1px solid var(--c-border);
     display: flex;
     align-items: center;
@@ -541,20 +541,39 @@ body.cursor-hover .cursor-ring {
     gap: 12px;
 }
 
-.hero-scroll-chevron {
+.scroll-indicator-new {
     position: absolute;
     bottom: 32px;
     left: 80px;
-    color: var(--c-muted);
-    transition: transform 0.3s ease, color 0.3s ease;
-    animation: bounce-chevron 2s ease-in-out infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    cursor: pointer;
 }
-.hero-scroll-chevron:hover {
-    color: var(--c-accent);
+.scroll-mouse {
+    width: 22px;
+    height: 34px;
+    border: 1.5px solid rgba(124, 92, 252, 0.4);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    padding-top: 6px;
+    transition: border-color 0.25s ease;
 }
-@keyframes bounce-chevron {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(6px); }
+.scroll-indicator-new:hover .scroll-mouse {
+    border-color: var(--c-accent);
+}
+.scroll-wheel {
+    width: 3px;
+    height: 6px;
+    background: var(--c-accent);
+    border-radius: 2px;
+    animation: scroll-wheel 1.6s ease-in-out infinite;
+}
+@keyframes scroll-wheel {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(10px); opacity: 0; }
 }
 
 /* ============================================
@@ -1241,8 +1260,11 @@ a.contact-link-item:hover .clink-arrow { opacity: 1; transform: translateX(4px);
         height: auto;
         padding: 60px 32px 80px;
     }
-    .hero-scroll-chevron {
-        display: none;
+    .scroll-indicator-new {
+        display: flex;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 24px;
     }
 
     .about-grid { grid-template-columns: 1fr; gap: 48px; }

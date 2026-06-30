@@ -481,11 +481,11 @@ body.cursor-hover .cursor-ring {
     align-items: center;
     gap: 8px;
     padding: 14px 28px;
-    background: var(--c-accent);
-    color: white;
+    background: linear-gradient(135deg, var(--c-accent2) 0%, var(--c-accent3) 100%);
+    color: var(--c-bg);
     text-decoration: none;
     border-radius: var(--r-sm);
-    font-weight: 600;
+    font-weight: 700;
     font-size: 0.95rem;
     transition: all 0.3s var(--ease-out);
     position: relative;
@@ -501,7 +501,7 @@ body.cursor-hover .cursor-ring {
 }
 .btn-glow:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 32px rgba(124, 92, 252, 0.5);
+    box-shadow: 0 8px 32px rgba(0, 242, 195, 0.4);
 }
 .btn-glow:hover::before { opacity: 1; }
 
@@ -541,6 +541,26 @@ body.cursor-hover .cursor-ring {
 .hero-socials-split {
     display: flex;
     gap: 12px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--c-border);
+    color: var(--c-muted);
+    text-decoration: none;
+    transition: all 0.25s ease;
+    background: rgba(255, 255, 255, 0.02);
+}
+.social-link:hover {
+    color: var(--c-text);
+    border-color: rgba(124, 92, 252, 0.4);
+    background: rgba(124, 92, 252, 0.1);
+    transform: translateY(-2px);
 }
 
 .scroll-indicator-new {

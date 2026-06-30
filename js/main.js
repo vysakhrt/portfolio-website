@@ -518,10 +518,10 @@
         position: fixed;
         top: 0;
         left: 0;
-        height: 2px;
+        height: 3px;
         width: 0%;
         background: linear-gradient(90deg, #7c5cfc, #4facfe, #00f2c3);
-        z-index: 9999;
+        z-index: 100005;
         transition: width 0.1s ease;
         pointer-events: none;
     `;

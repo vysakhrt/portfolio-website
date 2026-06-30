@@ -473,6 +473,69 @@ body.cursor-hover .cursor-ring {
     margin-bottom: 40px;
 }
 
+/* Hero buttons */
+.btn-glow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    background: var(--c-accent);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--r-sm);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s var(--ease-out);
+    position: relative;
+    overflow: hidden;
+}
+.btn-glow::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.btn-glow:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(124, 92, 252, 0.5);
+}
+.btn-glow:hover::before { opacity: 1; }
+
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 24px;
+    color: var(--c-text);
+    border: 1px solid var(--c-border);
+    border-radius: var(--r-sm);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    background: rgba(255, 255, 255, 0.03);
+    transition: all 0.3s var(--ease-out);
+}
+.btn-outline:hover {
+    border-color: rgba(124, 92, 252, 0.4);
+    background: rgba(124, 92, 252, 0.08);
+    transform: translateY(-2px);
+}
+
+.btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 24px;
+    color: var(--c-muted);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.25s ease;
+}
+.btn-ghost:hover { color: var(--c-text); }
+
 .hero-socials-split {
     display: flex;
     gap: 12px;

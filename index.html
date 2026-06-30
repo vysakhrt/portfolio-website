@@ -66,44 +66,44 @@
     <!-- NOISE OVERLAY -->
     <div class="noise-overlay"></div>
 
-    <!-- NAVIGATION -->
+    <!-- NAVIGATION (FLOATING NAV DOCK) -->
     <nav id="navbar">
-        <div class="nav-inner">
-            <a href="#hero" class="nav-logo">
-                <span class="logo-bracket">&lt;</span>
-                <span class="logo-text">vysakh</span>
-                <span class="logo-bracket">/&gt;</span>
+        <div class="nav-dock">
+            <!-- Logo Button -->
+            <a href="#hero" class="nav-dock-logo" aria-label="Home">
+                <span class="logo-bracket">&lt;</span><span class="logo-text">v</span><span class="logo-bracket">/&gt;</span>
             </a>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#about" class="nav-item" data-text="About">About</a></li>
-                <li><a href="#experience" class="nav-item" data-text="Experience">Experience</a></li>
-                <li><a href="#techstack" class="nav-item" data-text="Stack">Stack</a></li>
-                <li><a href="#projects" class="nav-item" data-text="Projects">Projects</a></li>
-                <li><a href="#contact" class="nav-item" data-text="Contact">Contact</a></li>
-                <li>
-                    <a href="assets/vysakhraju_resume.pdf" download class="nav-resume-btn">
-                        <span>Resume</span>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                    </a>
-                </li>
-            </ul>
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-                <span></span><span></span><span></span>
-            </button>
+            
+            <!-- Nav Link Buttons -->
+            <div class="nav-dock-links">
+                <a href="#about" class="nav-dock-item active" aria-label="About">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dock-icon"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <span class="dock-label">About</span>
+                </a>
+                <a href="#experience" class="nav-dock-item" aria-label="Experience">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dock-icon"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+                    <span class="dock-label">Experience</span>
+                </a>
+                <a href="#techstack" class="nav-dock-item" aria-label="Skills">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dock-icon"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg>
+                    <span class="dock-label">Stack</span>
+                </a>
+                <a href="#projects" class="nav-dock-item" aria-label="Projects">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dock-icon"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><rect width="20" height="14" x="2" y="6" rx="2"></rect></svg>
+                    <span class="dock-label">Projects</span>
+                </a>
+                <a href="#contact" class="nav-dock-item" aria-label="Contact">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dock-icon"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>
+                    <span class="dock-label">Contact</span>
+                </a>
+            </div>
+
+            <!-- Resume Download Button -->
+            <a href="assets/vysakhraju_resume.pdf" download class="nav-dock-resume" aria-label="Resume">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </a>
         </div>
     </nav>
-
-    <!-- MOBILE MENU -->
-    <div class="mobile-menu" id="mobile-menu">
-        <ul>
-            <li><a href="#about" class="mobile-link">About</a></li>
-            <li><a href="#experience" class="mobile-link">Experience</a></li>
-            <li><a href="#techstack" class="mobile-link">Stack</a></li>
-            <li><a href="#projects" class="mobile-link">Projects</a></li>
-            <li><a href="#contact" class="mobile-link">Contact</a></li>
-            <li><a href="assets/vysakhraju_resume.pdf" download class="mobile-link mobile-resume">Resume ↓</a></li>
-        </ul>
-    </div>
 
     <!-- MAIN CONTENT -->
     <main>

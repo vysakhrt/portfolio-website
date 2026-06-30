@@ -323,7 +323,7 @@
    ============================================== */
 (function initNavbar() {
     const navbar  = document.getElementById('navbar');
-    const navItems = document.querySelectorAll('.nav-item');
+    const navItems = document.querySelectorAll('.nav-dock-item');
     const sections = document.querySelectorAll('section[id]');
 
     window.addEventListener('scroll', () => {
@@ -352,41 +352,6 @@
             }
         });
     }, { passive: true });
-})();
-
-
-/* ==============================================
-   6. MOBILE MENU
-   ============================================== */
-(function initMobileMenu() {
-    const hamburger  = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
-
-    if (!hamburger || !mobileMenu) return;
-
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        mobileMenu.classList.toggle('open');
-        document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
-    });
-
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            mobileMenu.classList.remove('open');
-            document.body.style.overflow = '';
-        });
-    });
-
-    // Close on outside click
-    document.addEventListener('click', (e) => {
-        if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
-            hamburger.classList.remove('active');
-            mobileMenu.classList.remove('open');
-            document.body.style.overflow = '';
-        }
-    });
 })();
 
 
